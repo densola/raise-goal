@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raise Goal</title>
+    <link rel="stylesheet" href="simple.min.css" />
+    <script src="calc.js" async></script>
+  </head>
+  <body>
+    <header>
+      <h1>Raise Goal</h1>
+      <p>
+        This page estimates the constant percentage rate you need per year to
+        get you from your starting salary to your target salary by a certain
+        year.
+      </p>
+    </header>
+
+    <p class="notice">
+      <mark>Note:</mark> "Salary" can either be hourly, weekly, monthly, or
+      yearly as long as salary units of starting and target remain the same.<br />
+      E.g. It's okay to use a starting salary of 30000/<b>year</b> and target
+      salary of 50000/<b>year</b>, or starting of 12/<b>hour</b> and target of
+      15/<b>hour</b>.<br />
+      What <u style="color: red">won't</u> work is mismatched units, such as
+      starting of 12/hour and target of 30000/year.
+    </p>
+
+    <article>
+      <label for="starting-salary">Starting salary</label>
+      <input type="text" id="starting-salary" placeholder="Enter amount" />
+
+      <label for="starting-year">Starting year</label>
+      <input type="text" id="starting-year" placeholder="Enter year" />
+
+      <label for="target-salary">Target salary</label>
+      <input type="text" id="target-salary" placeholder="Enter amount" />
+
+      <label for="target-year">Target year</label>
+      <input type="text" id="target-year" placeholder="Enter year" />
+
+      <button onclick="calculate()">Calculate</button>
+
+      <p class="notice">
+        You need a constant raise rate of approximately
+        <code id="yearly-rate">???</code> per year.
+      </p>
+    </article>
+
+    <details id="yearly-details">
+      <summary>See process...</summary>
+      <p>Fill out the form, then press the "Calculate" button to start.</p>
+    </details>
+  </body>
+</html>
