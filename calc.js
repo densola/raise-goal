@@ -57,17 +57,34 @@ function calculate() {
   let startingPercentage = salaryDiff / yearDiff / startingSalary;
 
   if (
-    salaryDiff <= 0 ||
-    yearDiff <= 0 ||
-    yearDiff > 100 ||
     targetSalary <= 0 ||
     targetYear <= 0 ||
     startingSalary <= 0 ||
-    startingyear <= 0 ||
-    startingPercentage * 100 > 100
+    startingyear <= 0
   ) {
-    alert("Please reevaluate your data.");
+    alert("All values must be greater than 0.");
     return;
+  }
+
+  if (salaryDiff <= 0) {
+    alert("Your target salary must be larger than your starting salary.");
+    return;
+  }
+
+  if (yearDiff <= 0) {
+    alert("Your target year must be after your starting year.");
+    return;
+  }
+
+  if (yearDiff > 100) {
+    alert("Are you sure you're working for over 100 years?");
+    return;
+  }
+
+  if (startingPercentage > 5) {
+    alert(
+      "Displaying abnormally large rate. Are you sure you entered the right numbers?"
+    );
   }
 
   appendParagraphText(
