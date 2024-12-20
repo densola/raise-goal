@@ -163,7 +163,7 @@ function calculate() {
     firstResult.classList.add("notice");
 
     firstResult.innerText =
-      "Your raise must be at a constant " +
+      "Your raise must be at an estimated constant of " +
       fmtPercent(lastPercentage) +
       " per year to earn " +
       fmtDollar(targetSalary) +
@@ -175,7 +175,7 @@ function calculate() {
   }
 
   result.innerText =
-    "Your raise must be at a constant " +
+    "Your raise must be at an estimated constant of " +
     fmtPercent(lastPercentage) +
     " per year to earn " +
     fmtDollar(targetSalary) +

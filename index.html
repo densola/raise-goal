@@ -10,38 +10,62 @@
   <body>
     <header>
       <h1>Raise Goal</h1>
-      <p>
-        This page estimates the constant percentage rate you need per year to
-        get you from your starting salary to your target salary by a certain
-        year.
-      </p>
     </header>
 
-    <p class="notice">
-      <mark>Note:</mark> "Salary" can either be hourly, weekly, monthly, or
-      yearly as long as salary units of starting and target remain the same.<br />
-      E.g. It's okay to use a starting salary of 30000/<b>year</b> and target
-      salary of 50000/<b>year</b>, or starting of 12/<b>hour</b> and target of
-      15/<b>hour</b>.<br />
-      What <u style="color: red">won't</u> work is mismatched units, such as
-      starting of 12/hour and target of 30000/year.
-    </p>
-
     <!-- Not using <form></form> because there's no actual submission happening here -->
-    <article id="form">
-      <label for="starting-salary">Starting salary</label>
-      <input type="text" id="starting-salary" placeholder="Enter amount" />
+    <section id="form">
+      <h3>Enter values below</h3>
+      <p>
+        This estimates the constant yearly percentage rate required to achieve
+        your target salary.
+      </p>
 
-      <label for="starting-year">Starting year</label>
-      <input type="text" id="starting-year" placeholder="Enter year" />
+      <p>
+        <label for="starting-salary">Starting salary</label>
+        <input type="text" id="starting-salary" placeholder="Enter amount" />
+      </p>
 
-      <label for="target-salary">Target salary</label>
-      <input type="text" id="target-salary" placeholder="Enter amount" />
+      <p>
+        <label for="starting-year">Starting year</label>
+        <input type="text" id="starting-year" placeholder="Enter year" />
+      </p>
 
-      <label for="target-year">Target year</label>
-      <input type="text" id="target-year" placeholder="Enter year" />
+      <p>
+        <label for="target-salary">Target salary</label>
+        <input type="text" id="target-salary" placeholder="Enter amount" />
+      </p>
+
+      <p>
+        <label for="target-year">Target year</label>
+        <input type="text" id="target-year" placeholder="Enter year" />
+      </p>
 
       <button onclick="calculate()">Calculate</button>
+    </section>
+
+    <article>
+      <h3>A note on salary</h3>
+      <p>
+        "Salary" can either be hourly, weekly, monthly, or yearly as long as
+        salary units of starting and target remain the same.
+      </p>
+      <p>
+        E.g. It's <mark style="background-color: var(--allow)">okay</mark> to
+        use a starting salary of
+      </p>
+      <ul>
+        <li>
+          A starting salary of 30000/<u>year</u> and target salary of 50000/<u
+            >year</u
+          >
+        </li>
+        <li>starting of 12/<u>hour</u> and target of 15/<u>hour</u></li>
+      </ul>
+      <p>
+        What <mark style="background-color: var(--warn)">won't</mark> work is
+        mismatched units, such as starting of 12/<u>hour</u> and target of
+        30000/<u>year</u>.
+      </p>
     </article>
 
     <details id="yearly-details">
