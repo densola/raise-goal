@@ -27,7 +27,8 @@
       starting of 12/hour and target of 30000/year.
     </p>
 
-    <article>
+    <!-- Not using <form></form> because there's no actual submission happening here -->
+    <article id="form">
       <label for="starting-salary">Starting salary</label>
       <input type="text" id="starting-salary" placeholder="Enter amount" />
 
@@ -41,11 +42,6 @@
       <input type="text" id="target-year" placeholder="Enter year" />
 
       <button onclick="calculate()">Calculate</button>
-
-      <p class="notice">
-        You need a constant raise rate of approximately
-        <code id="yearly-rate">???</code> per year.
-      </p>
     </article>
 
     <details id="yearly-details">

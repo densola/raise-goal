@@ -154,5 +154,31 @@ function calculate() {
       fmtDollar(targetSalary)
   );
 
-  document.getElementById("yearly-rate").innerText = fmtPercent(lastPercentage);
+  let result = document.getElementById("result");
+  if (result == null) {
+    let form = document.getElementById("form");
+    let firstResult = document.createElement("p");
+
+    firstResult.id = "result";
+    firstResult.classList.add("notice");
+
+    firstResult.innerText =
+      "Your raise must be at a constant " +
+      fmtPercent(lastPercentage) +
+      " per year to earn " +
+      fmtDollar(targetSalary) +
+      " by " +
+      targetYear;
+
+    form.appendChild(firstResult);
+    return;
+  }
+
+  result.innerText =
+    "Your raise must be at a constant " +
+    fmtPercent(lastPercentage) +
+    " per year to earn " +
+    fmtDollar(targetSalary) +
+    " by " +
+    targetYear;
 }
